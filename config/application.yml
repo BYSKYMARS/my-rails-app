@@ -1,0 +1,5 @@
+stripe:
+  stripe_publishable_key: "pk_test_51QoFs9P4wrgM4HAre9Mdy9sIF07xB91zmeXwjTDqWERYafN87nh7smRJPVpJJvezWg3QGrpoYfE8dLfcGZvRkVU000skRQYnBO"
+  stripe_secret_key: "sk_test_51QoFs9P4wrgM4HArCSAbzuPKVaTyMx7cTjB2XoQX08Zkd3uxo8nErZAK4TxvR54rsTMgpEcyO0YxmvbdxC781fR000Ws5ZL9JA"
+  test_variable: "Hello, world!"
+

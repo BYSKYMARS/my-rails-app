@@ -1,0 +1,54 @@
+<h2 class="text-center my-4">Editar <%= resource_name.to_s.humanize %></h2>
+
+<div class="container">
+  <div class="card shadow p-4">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "needs-validation" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="mb-3">
+        <%= f.label :email, class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div class="alert alert-info">
+          Actualmente esperando confirmación para: <strong><%= resource.unconfirmed_email %></strong>
+        </div>
+      <% end %>
+
+      <div class="mb-3">
+        <%= f.label :password, class: "form-label" %>
+        <small class="text-muted">(Déjalo en blanco si no deseas cambiarlo)</small>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+        <% if @minimum_password_length %>
+          <small class="text-muted"><%= @minimum_password_length %> caracteres mínimo</small>
+        <% end %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password_confirmation, class: "form-label" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :current_password, class: "form-label" %>
+        <small class="text-muted">(Necesitamos tu contraseña actual para confirmar los cambios)</small>
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+      </div>
+
+      <div class="d-grid">
+        <%= f.submit "Actualizar", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+
+  <h3 class="text-danger mt-4 text-center">Cancelar mi cuenta</h3>
+  <div class="text-center">
+    <%= button_to "Eliminar cuenta", registration_path(resource_name), data: { confirm: "¿Estás seguro?", turbo_confirm: "¿Estás seguro?" }, method: :delete, class: "btn btn-danger mt-2" %>
+  </div>
+
+  <div class="text-center mt-4">
+    <%= link_to "Volver", :back, class: "btn btn-outline-secondary" %>
+  </div>
+</div>
+

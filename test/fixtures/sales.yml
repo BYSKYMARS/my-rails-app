@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_id: 1
+  email: MyString
+  product_cod: MyString
+  product_name: MyString
+  price: 9.99
+  quantity: 1
+  total: 9.99
+  date_time: 2025-02-18 23:17:49
+
+two:
+  order_id: 1
+  email: MyString
+  product_cod: MyString
+  product_name: MyString
+  price: 9.99
+  quantity: 1
+  total: 9.99
+  date_time: 2025-02-18 23:17:49

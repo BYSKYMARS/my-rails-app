@@ -1,0 +1,14 @@
+<% content_for :title, "Nuevo Producto" %>
+
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4">Agregar Nuevo Producto</h2>
+
+    <%= render "form", product: @product %>
+
+    <div class="mt-4 text-center">
+      <%= link_to "Volver a Productos", products_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>
+

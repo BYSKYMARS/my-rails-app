@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4">Detalles del Producto</h2>
+
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Nombre:</strong> <%= @product.nombre %></li>
+      <li class="list-group-item"><strong>Descripción:</strong> <%= @product.descripcion %></li>
+      <li class="list-group-item"><strong>Stock:</strong> <%= @product.stock %></li>
+      <li class="list-group-item"><strong>Precio:</strong> <%= number_to_currency(@product.precio) %></li>
+      <li class="list-group-item"><strong>Marca:</strong> <%= @product.marca %></li>
+      <li class="list-group-item">
+        <strong>Imagen Referencial:</strong><br>
+        <% if @product.imagen_referencial.attached? %>
+          <%= image_tag @product.imagen_referencial, class: "img-thumbnail mt-2", style: "max-width: 200px;" %>
+        <% else %>
+          <p class="text-muted">No hay imagen disponible.</p>
+        <% end %>
+      </li>
+    </ul>
+
+    <div class="mt-4 text-center">
+      <%= link_to 'Editar', edit_product_path(@product), class: "btn btn-primary me-2" %>
+      <%= link_to 'Volver', products_path, class: "btn btn-secondary me-2" %>
+      <%= button_to "Eliminar", @product, method: :delete, class: "btn btn-danger", data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+    </div>
+  </div>
+</div>

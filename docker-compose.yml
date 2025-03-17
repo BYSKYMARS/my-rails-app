@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  db:
+    image: byskymars/my-rails-app-db:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: byskymars/my-rails-app-rabbitmq:3-management  # Usar la imagen de Docker Hub
+    ports:
+      - "5672:5672"  # Puerto para AMQP (mensajería)
+      - "15672:15672"  # Puerto para la interfaz de gestión
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  web:
+    image: byskymars/my-rails-app-web:latest  # Usar la imagen de Docker Hub
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - rabbitmq
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
+    command: tail -f /dev/null  # Mantiene el contenedor en ejecución
+
+volumes:
+  postgres_data:

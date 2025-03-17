@@ -1,0 +1,129 @@
+Fecha: 2025-02-06 05:21:40 +0000
+Usuario: andre@admin.com
+Total: $600.0
+Productos:
+- ID Producto: 2, Cantidad: 1
+----------------------------------------
+Fecha: 2025-02-06 05:24:29 +0000
+Usuario: andre@admin.com
+Total: $600.0
+Productos:
+- ID Producto: 2, Cantidad: 1
+----------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $1100.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+- Producto ID: 3, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $500.0
+Fecha: 
+Productos:
+- Producto ID: 3, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $100.0
+Fecha: 
+Productos:
+- Producto ID: 1, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $1200.0
+Fecha: 
+Productos:
+- Producto ID: 3, Cantidad: 1
+- Producto ID: 1, Cantidad: 1
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 2025-02-06 06:33:40
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $1200.0
+Fecha: 2025-02-06 06:35:52
+Productos:
+- Producto ID: 3, Cantidad: 1
+- Producto ID: 1, Cantidad: 1
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $600.0
+Fecha: 2025-02-06 16:28:06
+Productos:
+- Producto ID: 2, Cantidad: 1
+---------------------------------------
+Usuario: andre@admin.com
+Total: $1700.0
+Fecha: 2025-02-06 16:30:46
+Productos:
+- Producto ID: 2, Cantidad: 1
+- Producto ID: 1, Cantidad: 1
+- Producto ID: 3, Cantidad: 2
+---------------------------------------
+Usuario: andre@admin.com
+Total: $1700.0
+Fecha: 2025-02-06 16:30:46
+Productos:
+- Producto ID: 2, Cantidad: 1
+- Producto ID: 1, Cantidad: 1
+- Producto ID: 3, Cantidad: 2
+---------------------------------------

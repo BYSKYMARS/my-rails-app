@@ -1,0 +1,52 @@
+<h1 class="text-center my-4">Carrito de Compras 🛒</h1>
+
+<% if @cart.line_items.any? %>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Subtotal</th>
+          <th>Actualizar Cantidad</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cart.line_items.each do |line_item| %>
+          <tr>
+            <td><%= line_item.product.nombre %></td>
+            <td><%= line_item.quantity %></td>
+            <td><%= number_to_currency(line_item.product.precio) %></td>
+            <td><%= number_to_currency(line_item.product.precio * line_item.quantity) %></td>
+
+            <td>
+              <%= form_with url: update_item_cart_path(line_item), method: :patch, local: true, class: "d-flex align-items-center gap-2" do |form| %>
+                <%= form.number_field :quantity, value: line_item.quantity, min: 1, class: "form-control w-50" %>
+                <%= form.submit "Actualizar", class: "btn btn-primary btn-sm" %>
+              <% end %>
+            </td>
+
+            <td>
+              <%= button_to '❌', remove_product_cart_path(line_item.product), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="h4 text-end">Total: <strong><%= number_to_currency(@cart.line_items.sum { |item| item.product.precio * item.quantity }) %></strong></p>
+
+  <div class="d-flex justify-content-between mt-4">
+    <%= link_to '⬅ Volver a Mostrar Productos', products_path, class: "btn btn-secondary" %>
+    <%= link_to '💳 Ir a la pasarela de pagos', new_payment_path, class: "btn btn-success" %>
+  </div>
+
+<% else %>
+  <div class="alert alert-warning text-center">
+    <p>El carrito está vacío.</p>
+    <%= link_to '🛍️ Volver a Mostrar Productos', products_path, class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Órdenes de Venta</h1>
+
+  <!-- Formulario de búsqueda -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <%= form_with url: sales_path, method: :get, local: true, class: "input-group" do %>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Buscar ventas..." %>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Botón para volver a mostrar productos -->
+  <div class="mb-3">
+    <%= link_to 'Volver a Mostrar Productos', products_path, class: "btn btn-secondary" %>
+  </div>
+
+  <!-- Tabla de ventas -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID Orden</th>
+          <th>Email</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th>Fecha</th>
+          <th>Factura</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sales.each do |sale| %>
+          <tr>
+            <td><%= sale.order_id %></td>
+            <td><%= sale.email %></td>
+            <td><%= sale.product_name %></td>
+            <td><%= number_to_currency(sale.price) %></td>
+            <td><%= sale.quantity %></td>
+            <td><%= number_to_currency(sale.total) %></td>
+            <td><%= sale.date_time.strftime('%Y-%m-%d %H:%M') %></td>
+            <td>
+              <% if sale.invoice_url.present? %>
+                <a href="<%= sale.invoice_url %>" target="_blank" class="btn btn-success btn-sm">Ver Factura</a>
+              <% else %>
+                <span class="text-warning">Pendiente</span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
