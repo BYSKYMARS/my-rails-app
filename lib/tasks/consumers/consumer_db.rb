@@ -5,7 +5,7 @@ require 'json'
 Rails.logger.info "Iniciando consumidor de órdenes de venta..."
 puts "INICIA CONSUMIDOR CONSUMER_DB"
 
-connection = Bunny.new(hostname: 'my-rails-app-rabbitmq-1', user: 'guest', password: 'guest')
+connection = Bunny.new(hostname: 'my-rails-app_rabbitmq_1', user: 'guest', password: 'guest')
 connection.start
 channel = connection.create_channel
 queue_sales = channel.queue('sales_queue', durable: true)

@@ -64,7 +64,7 @@ class PaymentsController < ApplicationController
   def publicar_en_rabbitmq(cart, total)
     begin
       Rails.logger.info "Iniciando conexión con RabbitMQ..."
-      connection = Bunny.new(hostname: 'my-rails-app-rabbitmq-1', user: 'guest', password: 'guest')
+      connection = Bunny.new(hostname: 'my-rails-app_rabbitmq_1', user: 'guest', password: 'guest')
       connection.start
 
       channel = connection.create_channel

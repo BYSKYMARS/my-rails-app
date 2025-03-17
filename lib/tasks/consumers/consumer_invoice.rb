@@ -5,7 +5,7 @@ require 'stripe'
 Stripe.api_key = 'sk_test_51QoFs9P4wrgM4HArCSAbzuPKVaTyMx7cTjB2XoQX08Zkd3uxo8nErZAK4TxvR54rsTMgpEcyO0YxmvbdxC781fR000Ws5ZL9JA'  # Usa variables de entorno en producción
 
 # Configurar conexión con RabbitMQ
-connection = Bunny.new(hostname: 'my-rails-app-rabbitmq-1', user: 'guest', password: 'guest')
+connection = Bunny.new(hostname: 'my-rails-app_rabbitmq_1', user: 'guest', password: 'guest')
 connection.start
 channel = connection.create_channel
 queue = channel.queue('invoice_queue', durable: true)
