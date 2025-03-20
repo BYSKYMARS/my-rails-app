@@ -103,7 +103,12 @@ jobs:
           password: 123
           script: |
             cd /home/zero/my-rails-app
-            git pull origin master
+            docker-compose down
             docker-compose up -d
-            docker-compose exec -T web bah -c "rails server -b 0.0.0.0"
+            docker-compose exec -T web bash -c "git config --global user.email 'kazukiri43@gmail.com'"
+            docker-compose exec -T web bash -c "git config --global user.name 'BYSKYMARS'"
+            docker-compose exec -T web bash -c "git pull origin master"
+            docker-compose exec -T web bash -c "git config --global --add safe.directory /myapp"
+            docker-compose exec -T web bash -c "bundle install --local"
+            docker-compose exec -T web bash -c "rails server -b 0.0.0.0"
             
