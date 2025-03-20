@@ -90,7 +90,7 @@ jobs:
       - name: Deploy to Ubuntu Server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: 192.168.1.151
+          host: 100.73.211.47
           username: ${{ secrets.SSH_USER }}
           password: 123
           script: |
