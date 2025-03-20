@@ -92,7 +92,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.ssh_password}}
           script: |
             cd /ruta/del/proyecto/en/servidor
             git pull origin main
