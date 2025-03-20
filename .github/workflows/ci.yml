@@ -102,7 +102,7 @@ jobs:
           username: zero
           password: 123
           script: |
-            cd /ruta/del/proyecto/en/servidor
+            cd /home/zero/my-rails-app
             git pull origin main
             docker compose down
             docker compose up -d
