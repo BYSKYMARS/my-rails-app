@@ -96,7 +96,7 @@ jobs:
           sudo tailscale up --authkey=${{ secrets.TAILSCALE}}
 
       - name: Deploy to Ubuntu Server
-        uses: appleboy/ssh-action@v0.1.10
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: 100.73.211.47
           username: zero
