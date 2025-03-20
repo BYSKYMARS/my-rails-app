@@ -92,7 +92,7 @@ jobs:
 
       - name: Install Tailscale
         run: |
-          curl -fsSL https://pkgs.tailscale.com/install.sh | sudo sh
+          curl -fsSL https://tailscale.com/install.sh | sudo sh
           sudo tailscale up --authkey=${{ secrets.TAILSCALE}}
 
       - name: Deploy to Ubuntu Server
