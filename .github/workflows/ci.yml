@@ -87,6 +87,14 @@ jobs:
     runs-on: ubuntu-latest
     #needs: test  # Se ejecuta solo si los tests pasan
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Tailscale
+        run: |
+          curl -fsSL https://pkgs.tailscale.com/install.sh | sudo sh
+          sudo tailscale up --authkey=${{ secrets.TAILSCALE}}
+
       - name: Deploy to Ubuntu Server
         uses: appleboy/ssh-action@v0.1.10
         with:
