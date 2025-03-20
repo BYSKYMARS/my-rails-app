@@ -34,6 +34,10 @@ RUN rbenv install 3.2.2 && rbenv global 3.2.2
 # Instalar Bundler y Rails
 RUN gem install bundler rails
 
+#bundle install
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
 # Crear un directorio para la aplicación
 WORKDIR /myapp
 
