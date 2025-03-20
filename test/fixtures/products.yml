@@ -5,7 +5,7 @@ one:
   descripcion: MyText
   stock: 1
   precio: 9.99
-  imagen_referencial: MyString
+  
   marca: MyString
 
 two:
@@ -13,5 +13,5 @@ two:
   descripcion: MyText
   stock: 1
   precio: 9.99
-  imagen_referencial: MyString
+
   marca: MyString
