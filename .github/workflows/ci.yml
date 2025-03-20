@@ -104,7 +104,6 @@ jobs:
           script: |
             cd /home/zero/my-rails-app
             git pull origin master
-            docker-compose down
             docker-compose up -d
             docker-compose exec -T web bah -c "rails server -b 0.0.0.0"
             
