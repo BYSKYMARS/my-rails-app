@@ -65,7 +65,7 @@ end
 gem 'bunny' #rabbitmq
 gem 'pg'    #postgreSQL
 gem 'devise' #Inicion de Sesion
-gem 'image_processing', '~> 1.2' #Procesamiento de imagen
+gem 'image_processing', '~> 1.14' #Procesamiento de imagen
 gem 'mini_magick' #Precesamiento de imagen
 gem 'stripe' #Pasarela de Pagos
 gem 'figaro' #Variables de entorno sin uso
